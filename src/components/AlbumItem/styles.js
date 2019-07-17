@@ -20,7 +20,8 @@ export default StyleSheet.create({
   },
   name: {
     fontSize: 18,
-    fontWeight: '500'
+    fontWeight: '500',
+    color: '#000'
   },
   counter: {
     fontSize: 12

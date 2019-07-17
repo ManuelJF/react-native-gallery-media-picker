@@ -36,23 +36,7 @@ class MediaItem extends Component {
 
   generateThumbnail () {
     let thumbnailPath = this.props.item.image.uri;
-
-    if (Platform.OS === 'ios') {
-      this.setState({
-        thumbnailPath
-      });
-    } else if (Platform.OS === 'android') {
-      RNThumbnail
-        .get(thumbnailPath)
-        .then((result) => {
-          this.setState({
-            thumbnailPath: result.path
-          });
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    }
+    this.setState({ thumbnailPath })
   }
 
   /**
